@@ -51,4 +51,8 @@ Actions:
       # Be aware that a new version of the action could be available on GitHub.
       Steps:
         - uses: docker/setup-buildx-action@v2
-        - uses: docker/build-push-action@v4.1.1
+        - 
+            uses: docker/build-push-action@v4.1.1
+            with:
+                context: .
+
