@@ -50,5 +50,5 @@ Actions:
       # Please visit the action URL to look for examples on the action usage.
       # Be aware that a new version of the action could be available on GitHub.
       Steps:
-        - uses: docker/setup-buildx-action@v3
+        - uses: docker/setup-buildx-action@v2
         - uses: docker/build-push-action@v4.1.1
