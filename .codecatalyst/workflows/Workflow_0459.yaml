@@ -67,10 +67,9 @@ Actions:
       # Required - Steps are sequential instructions that run shell commands
       Steps:
         - name: PHPStan
-          uses: php-actions/phpstan@v3
+          uses: rodion-k/phpstan-action@latest
           with:
             path: src/
-          env:
-            ACTION_TOKEN: 1234
+            github_token: ${Secrets.ACTION_TOKEN}
     Compute:
       Type: EC2
