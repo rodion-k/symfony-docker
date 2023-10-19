@@ -62,9 +62,6 @@ Actions:
       # Optional
       Sources:
         - WorkflowSource # This specifies that the action requires this Workflow as a source
-      Variables:
-        - Name: ACTION_TOKEN
-          Value: ${Secrets.ACTION_TOKEN}
     # Defines the action's properties.
     Configuration:
       # Required - Steps are sequential instructions that run shell commands
@@ -73,5 +70,7 @@ Actions:
           uses: php-actions/phpstan@v3
           with:
             path: src/
+          env:
+            ACTION_TOKEN: ${Secrets.ACTION_TOKEN}
     Compute:
       Type: EC2
