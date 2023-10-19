@@ -71,5 +71,6 @@ Actions:
           with:
             path: src/
             github_token: ${Secrets.ACTION_TOKEN}
+            version: latest
     Compute:
       Type: EC2
