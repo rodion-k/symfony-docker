@@ -64,7 +64,7 @@ Actions:
         - WorkflowSource # This specifies that the action requires this Workflow as a source
       Variables:
         - Name: ACTION_TOKEN
-          Value: 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
+          Value: ${Secrets.ACTION_TOKEN}
     # Defines the action's properties.
     Configuration:
       # Required - Steps are sequential instructions that run shell commands
