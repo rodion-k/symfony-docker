@@ -54,3 +54,21 @@ Actions:
             context: .
     Compute:
       Type: EC2
+  GitHubActions_6b:
+    # Identifies the action. Do not modify this value.
+    Identifier: aws/github-actions-runner@v1.0.0
+    # Specifies the source and/or artifacts to pass to the action as input.
+    Inputs:
+      # Optional
+      Sources:
+        - WorkflowSource # This specifies that the action requires this Workflow as a source
+    # Defines the action's properties.
+    Configuration:
+      # Required - Steps are sequential instructions that run shell commands
+      Steps:
+        - name: PHPStan
+          uses: php-actions/phpstan@v3
+          with:
+            path: src/
+    Compute:
+      Type: EC2
