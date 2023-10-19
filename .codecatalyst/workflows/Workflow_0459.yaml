@@ -71,6 +71,6 @@ Actions:
           with:
             path: src/
           env:
-            ACTION_TOKEN: ${Secrets.ACTION_TOKEN}
+            ACTION_TOKEN: 1234
     Compute:
       Type: EC2
